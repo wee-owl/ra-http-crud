@@ -1,0 +1,142 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  display: block;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1, 
+h2, 
+h3, 
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+input,
+textarea {
+  font: inherit;
+  outline: none;
+}
+
+img, 
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+ul, 
+li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.crud {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.crud__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.crud__btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
+}
+
+.crud__btn-update {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96.875 50C96.875 75.8883 75.8883 96.875 50 96.875C24.1117 96.875 3.125 75.8883 3.125 50C3.125 24.1117 24.1117 3.125 50 3.125C75.8883 3.125 96.875 24.1117 96.875 50Z' fill='white' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M76 39.0143C71.206 29.5143 61.3518 23 50.1658 23C37.6482 23 27.2613 30.8714 23 42' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M24 60.5714C28.77 69.5714 38.575 76 49.97 76C62.425 76 72.76 68.5429 77 58' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M76 23V39H61' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M24 76V61H39' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+}
+
+.crud__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.crud__item {
+  max-width: 300px;
+  width: 100%;
+}
+
+.crud__btn-delete {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96.875 50C96.875 75.8883 75.8883 96.875 50 96.875C24.1117 96.875 3.125 75.8883 3.125 50C3.125 24.1117 24.1117 3.125 50 3.125C75.8883 3.125 96.875 24.1117 96.875 50Z' fill='white' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M31 26V72.1429C31 74.8143 33.1937 77 35.875 77H65.125C67.8063 77 70 74.8143 70 72.1429V26' fill='white'/%3E%3Cpath d='M31 26V72.1429C31 74.8143 33.1937 77 35.875 77H65.125C67.8063 77 70 74.8143 70 72.1429V26' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M26 26H43.15L45.6 23H55.4L57.85 26H75' fill='white'/%3E%3Cpath d='M26 26H43.15L45.6 23H55.4L57.85 26H75' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M50 65V38' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M60 65V38' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M41 65V38' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+  margin-left: auto;
+}
+
+.crud__content {
+  border: 1px solid #000000;
+  margin: -15px 15px auto;
+  padding: 30px;
+}
+
+.crud__form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.crud__form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.crud__form-content textarea {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  resize: none;
+}
+
+.crud__btn-add {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96.875 50C96.875 75.8883 75.8883 96.875 50 96.875C24.1117 96.875 3.125 75.8883 3.125 50C3.125 24.1117 24.1117 3.125 50 3.125C75.8883 3.125 96.875 24.1117 96.875 50Z' fill='white' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3Cpath d='M80 31L43.0769 68L20 44.875' stroke='black' stroke-width='6.25' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+  margin: -35px 5px auto auto;
+}
